@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      h1 {
+        padding-top: 30px;
+        text-align: center;
+        color: #333;
+      }
+      span {
+        text-decoration: underline;
+      }
+      .container {
+        margin: auto;
+        max-width: 506px;
+      }
+      .container img {
+        display: block;
+        margin: 50px auto 50px;
+        border: grey 3px solid;
+        border-radius: 50%;
+      }
+      button#switch {
+        display: block;
+        margin: auto;
+        padding: 12px 42px;
+        cursor: pointer;
+        color: #333;
+        border: 1px solid #333;
+        border-radius: 5px;
+        font-size: 15px;
+        font-weight: bold;
+      }
+      button#switch:hover {
+        color: #000;
+        outline: none;
+      }
+      button#switch:focus {
+        border: 1px solid #333;
+        outline: none;
+      }
+    </style>
+    <title>Lightbulbs</title>
+  </head>
+  <body>
+    <h1>Turn the <span>Light</span> On !</h1>
+    <div class="container">
+      <a href="https://stock.adobe.com/stock-photo/id/366613431" target="_blank" title="Link to Illustration"> <img src="img/bulbOFF.png" id="bulbOff" alt="Bulb-Off"></a>
+    </div>
+    <button id="switch" onclick="turnOn()">ON</button>
+    <script>
+      var press = true;
+      function turnOn() {
+        if (press) {
+          document.getElementById('bulbOff').src = 'img/bulbOn.png';
+          document.getElementById('switch').style.backgroundColor = 'yellow';
+          document.getElementById('bulbOff').style.borderColor = 'yellow';
+          document.getElementById('switch').innerHTML = 'OFF';
+          press = false;
+        } else {
+          document.getElementById('bulbOff').src = 'img/bulbOff.png';
+          document.getElementById('switch').style.backgroundColor = '#ccc';
+          document.getElementById('bulbOff').style.borderColor = 'grey';
+          document.getElementById('switch').innerHTML = 'ON';
+          press = true;
+        }
+      }
+    </script>
+  </body>
+</html>
+    
+    
+    
+    
+        
+
+
+    
+
+
